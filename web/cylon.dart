@@ -1,5 +1,5 @@
 import 'dart:html';
-import 'dart:convert';
+//import 'dart:convert';
 
 void main() {
   new ParseDocument(bodyEl: querySelector('.cylon'));
@@ -13,7 +13,7 @@ class ParseDocument{
   ParseDocument({bodyEl}){
     _original = bodyEl.text;
     getTags();
-    bodyEl.children.add(new HtmlEscape().convert(generateHTML()));
+    bodyEl.innerHtml = generateHTML();
   }
   
   getTags(){
