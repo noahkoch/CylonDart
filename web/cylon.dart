@@ -1,7 +1,12 @@
 import 'dart:html';
+import 'package:routes.dart';
+
+library client;
 
 void main() {
   new ParseDocument(bodyEl: querySelector('.cylon'));
+  var router = new Router()
+    ..addHandler(pageURL,parsePage);
 }
 
 class ParseDocument{
